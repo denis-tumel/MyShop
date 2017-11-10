@@ -8,7 +8,9 @@ use App\product;
 class PageController extends Controller
 {
     public function getIndex($id = 0){
+    	$products = Product::where("catalog_id", $id)->get();
     		$obj = Catalog::find($id);
-    		return view('page', compact('obj'));
+    		//dd($products);
+    		return view('page', compact('obj', 'products'));
     }
 }
