@@ -17,4 +17,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/page/{id}', 'PageController@getIndex');
-Route::get('{id}', 'SaticController@getIndex');
+Route::get('{id}', 'StaticController@getIndex');

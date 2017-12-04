@@ -7,7 +7,7 @@ use App\Maintext;
 
 
 
-class SaticController extends Controller
+class StaticController extends Controller
 {
     public function getIndex($id = null){
     	$obj = Maintext::where('url',$id)->first();

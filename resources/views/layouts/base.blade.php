@@ -8,46 +8,47 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Shop</title>
+    <title>Смартфоны на акции</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
 @section('styles')
     <!-- Custom styles for this template -->
-    <link href="{{asset('css/shop-homepage.css')}}"" rel="stylesheet">
+    <link href="{{asset('css/shop-homepage.css')}}" rel="stylesheet">
+    <link href="{{asset('public/css/main.css')}}" rel="stylesheet">
 @show
   </head>
 
   <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top my-brand">
       <div class="container">
-        <a class="navbar-brand" href="{{('/')}}">Главная</a>
+        <a class="navbar-brand " href="{{('/')}}"><h3><sub>Discounts</sub>Phone</h3></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="{{asset('home')}}">Home-страница
+              <a class="nav-link" href="{{asset('home')}}">Home-page
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('about')}}">О сайте</a>
+              <a class="nav-link" href="{{asset('about')}}">About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('services')}}">Сервис</a>
+              <a class="nav-link" href="{{asset('services')}}">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{asset('contact')}} ">Контакты</a>
+              <a class="nav-link" href="{{asset('contact')}} ">Contact</a>
             </li>
           </ul>
            <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                @guest
-                            <li><a href="{{ route('login') }}">Login </a></li>
+                            <li><a href="{{ route('login') }}">Login</a></li>
                             <li><a href="{{ route('register') }}">Register</a></li>
                         @else
                             <li class="dropdown">
@@ -76,14 +77,14 @@
     </nav>
 
     <!-- Page Content -->
-    <div class="container">
+    <div class="container ">
 
-      <div class="row">
+      <div class="row ">
 
-        <div class="col-lg-3">
+        <div class="col-lg-3 ">
 
-          <h1 class="my-4">Name</h1>
-          <div class="list-group">
+          <h1 class="my-4 cl ">Catalogs:</h1>
+          <div class="list-group ">
             @foreach($catalogs as $one)
             <a href="{{asset('page/'.$one->id)}}" class="list-group-item">{{$one->name}}</a>
             @endforeach
@@ -92,7 +93,7 @@
         </div>
         <!-- /.col-lg-3 -->
 
-        <div class="col-lg-9">
+        <div class="col-lg-9 ">
           @yield('content')
         </div>
         <!-- /.col-lg-9 -->
@@ -104,9 +105,9 @@
     <!-- /.container -->
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark">
+    <footer class="py-5 bg-dark my-brand ">
       <div class="container">
-        <p class="m-0 text-center text-white">Copyright &copy; Your Website 2017</p>
+        <p class="m-0 text-center text-white">Copyright &copy; Denis Tumel 2017</p>
       </div>
       <!-- /.container -->
     </footer>
