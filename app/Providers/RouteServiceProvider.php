@@ -21,11 +21,10 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+    public function boot(/*Router $router*/)
     {
-        //
-
-        parent::boot();
+        // $router->pattern('id', '[0-9]+');
+        parent::boot(/*$router*/);
     }
 
     /**

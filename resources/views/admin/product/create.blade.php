@@ -30,7 +30,15 @@
         {!! Form::textarea('body', old('body'), array('class'=>'form-control ckeditor')) !!}
         
     </div>
-</div><div class="form-group">
+</div>
+<div class="form-group">
+    {!! Form::label('character', 'character', array('class'=>'col-sm-2 control-label')) !!}
+    <div class="col-sm-10">
+        {!! Form::textarea('character', old('character'), array('class'=>'form-control ckeditor')) !!}
+        
+    </div>
+</div>
+<div class="form-group">
     {!! Form::label('picture', 'picture', array('class'=>'col-sm-2 control-label')) !!}
     <div class="col-sm-10">
         {!! Form::file('picture') !!}

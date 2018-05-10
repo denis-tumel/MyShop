@@ -13,15 +13,15 @@ class CreateCatalogTable extends Migration {
      */
     public function up()
     {
-        Model::unguard();
-        Schema::create('catalog',function(Blueprint $table){
-            $table->increments("id");
-            $table->string("name");
-            $table->text("body")->nullable();
-            $table->string("type")->nullable();
-            $table->timestamps();
-            $table->softDeletes();
-        });
+            Model::unguard();
+            Schema::create('catalog',function(Blueprint $table){
+                $table->increments("id");
+                $table->string("name");
+                $table->text("body")->nullable();
+                $table->string("type")->nullable();
+                $table->timestamps();
+                $table->softDeletes();
+            });
     }
 
     /**

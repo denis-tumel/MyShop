@@ -18,6 +18,7 @@ class CreateProductTable extends Migration {
             $table->increments("id");
             $table->string("name");
             $table->text("body")->nullable();
+            $table->text("character")->nullable();
             $table->string("picture")->nullable();
             $table->integer("catalog_id")->references("id")->on("catalog")->nullable();
             $table->string("price")->nullable();

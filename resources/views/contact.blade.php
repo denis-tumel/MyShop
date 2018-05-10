@@ -1,7 +1,11 @@
 @extends('layouts.base')
+@section('styles')
+ @parent
+@stop
+
 @section('catalog')
-  @parent
 @endsection
+
 @section('content')
-  @include('base_content_image')
+  @include('map_form')
 @endsection
